@@ -1,14 +1,10 @@
 <?php include 'nav.php';
 include 'initialize.php';
 
-$stmt = $pdo->prepare('SELECT * FROM `posts` WHERE id = :id');
+$stmt = $dbConnection->prepare('SELECT * FROM `posts`');
 $stmt->execute([':id' => 1]);
-
-foreach($stmt->fetchAll() as $x) {
-    var_dump($x);
-    var_dump($_POST);
-}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +14,18 @@ foreach($stmt->fetchAll() as $x) {
     <link rel="stylesheet" href="/blj-blog/styles.css">
 </head>
 <body>
+
+    <?php
+    foreach($stmt->fetchAll() as $posts) {
+    echo '<p>' . $posts["created_by"]. '</p>';
+    echo '<p>' . $posts["post_title"]. '</p>';
+    echo '<p>' . $posts["post_text"] . '</p>';
+    echo '<p>' . $posts["created_at"]. '</p>';
+    }
+    ?>
+
     <form action="/blj-blog/blogs.php" method="post">
-        <div class="name">
+        <div class="name"><br>
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br>
         </div><br>
@@ -28,8 +34,10 @@ foreach($stmt->fetchAll() as $x) {
             <label for="name">Beitrag:</label><br>
             <textarea name="post" rows="15" cols="60"></textarea> 
         </div>
-        <input class="submit" type="submit" value="Submit">
-       
+        <input class="submit" type="submit" value="Submit">       
     </form>
 </body>
 </html>
+
+<!-- INSERT INTO posts (created_at, created_by, post_text, post_title) 
+ VALUES(now(), 'Corinne', 'Das war ein toller Tag! So schönes Wetter!', 'Ausflug im BLJ') -->

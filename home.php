@@ -1,9 +1,8 @@
 <?php 
 include 'nav.php';
 include 'initialize.php'
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@ include 'initialize.php'
     <link rel="stylesheet" href="/blj-blog/styles.css">
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Homepage</h1>
+    <p>Welcome!</p>
 </body>
 </html>
