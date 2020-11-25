@@ -32,3 +32,25 @@ li a:hover {
   height: 42px;
   color: white;
 }
+
+.created-by {
+  color: blue;
+  font-style: italic;
+}
+
+.post-title {
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+.post-border{
+  border: 2px solid black;
+}
+
+.created-at {
+  color: red;
+}
+
+.form-group {
+  text-align: center;
+}
