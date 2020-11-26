@@ -1,6 +1,7 @@
 li {
   display: inline;
   float: left;
+  border-right: 1px solid #bbb;
 }
 
 ul {
@@ -9,6 +10,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color:gray;
+  position: sticky;
+  width: auto;
 }
 
 li a {
@@ -45,6 +48,8 @@ li a:hover {
 
 .post-border{
   border: 2px solid black;
+  border-radius: 10px;
+  background-color:silver;
 }
 
 .created-at {
@@ -53,4 +58,21 @@ li a:hover {
 
 .form-group {
   text-align: center;
+}
+
+.post-text {
+  font-size: 18px;
+}
+
+.created-at, .created-by {
+  text-align: center;
+}
+
+.blog-home {
+  background-image: url(https://cdn.shopify.com/s/files/1/0301/0065/files/fall_background_image_landscape_tree_lake_mountain_scene_web_2048x2048.jpg?16615717205281063826);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+ 
+
 }
