@@ -18,8 +18,5 @@ foreach($urls as $url) {
     $link = '<a href="' . $url["blogUrl"] . '" target="_blank">' . $url["blogAuthor"] . '\'s Blog' . '</a>' . '<br>';
 
    echo $link;
-}
-
-   
-
+} 
 ?>

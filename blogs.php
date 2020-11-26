@@ -31,7 +31,7 @@
         foreach($statement->fetchAll() as $posts) {
             
             echo '<p class="post-title">' . $posts["post_title"]. '</p>';
-            echo '<div class="post-border">'.  '<p class="post-text">'. $posts["post_text"]. '</p>'. '<p>'.  '<p class="created-by">'. $posts["created_by"]. '</p>'. '<p class="created-at">'. $posts["created_at"]. '</p>'. '</div>';
+            echo '<div class="post-border">'. '<p class="post-text">'. $posts["post_text"]. '</p>'. '<p>'.  '<p class="created-by">'. $posts["created_by"]. '</p>'. '<p class="created-at">'. $posts["created_at"]. '</p>'. '</div>';
         } 
     // }
 ?>
